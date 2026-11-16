@@ -1,15 +1,6 @@
 {
   "functions": {
-    "api/**/*.php": {
-      "runtime": "vercel-php@0.7.1"
-    },
-    "*.php": {
-      "runtime": "vercel-php@0.7.1"
-    },
-    "admin/*.php": {
-      "runtime": "vercel-php@0.7.1"
-    },
-    "member/*.php": {
+    "api/index.php": {
       "runtime": "vercel-php@0.7.1"
     }
   },
@@ -19,16 +10,8 @@
       "dest": "/assets/$1"
     },
     {
-      "src": "/admin/(.*)",
-      "dest": "/admin/$1"
-    },
-    {
-      "src": "/member/(.*)",
-      "dest": "/member/$1"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/api/index.php"
     }
   ]
 }
